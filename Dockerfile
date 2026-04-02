@@ -8,8 +8,7 @@ COPY mvnw .
 COPY mvnw.cmd .
 COPY src src
 
-RUN chmod +x mvnw
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Stage 2: Run the application
 FROM eclipse-temurin:11-jre
